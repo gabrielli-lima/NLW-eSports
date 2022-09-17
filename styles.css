@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* boder-box sempre vai considerar 580px do max-width mesmo que coloque o preenchimento na caixa  */
+    /* boder-box -> sempre vai considerar 580px do max-width mesmo que coloque o preenchimento na caixa */
 }
 
 body {
@@ -21,7 +21,6 @@ body * {
 header {
     height: calc(120px + 32px);
     padding-top: 32px;
-
 }
 
 header div {
@@ -29,12 +28,13 @@ header div {
     margin: auto;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     border-radius: 50%;
+
     display: flex;
     padding: 4px;
 
     transition: transform .3s;
-    animation: fromTop .7s .2s backwards; /* nome da animação, tempo de duração, delay(espera para começar)*/
-
+    animation: fromTop .7s .2s backwards;
+    /* nome da animação, tempo de duração, delay(espera para começar) */
 }
 
 header div img {
@@ -46,7 +46,7 @@ header div:hover {
     transform: scale(1.1);
 }
 
-/* *-> é um seletor universal */
+/* '*' -> é um seletor universal */
 /* main * {
     border: 1px solid red;
 } */
@@ -54,7 +54,6 @@ header div:hover {
 main {
     max-width: 580px;
     width: 90%;
-
     margin: 32px auto;
 
     display: grid;
@@ -65,20 +64,21 @@ main {
     gap: 24px; */
 }
 
-main section{
+main section {
     animation: fromBottom .7s backwards;
 }
 
-main section:nth-child(1){ /* main pega o elemento section do filho(child) numero(nth) um */
+/* main pega o elemento section do filho(child) número(nth) um */
+main section:nth-child(1) {
     animation-delay: 0;
 }
 
-main section:nth-child(2){
-    animation-delay: .4s;
+main section:nth-child(2) {
+    animation-delay: .3s;
 }
 
-main section:nth-child(3){
-    animation-delay: .8s;
+main section:nth-child(3) {
+    animation-delay: .6s;
 }
 
 ul {
@@ -90,7 +90,6 @@ section {
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     padding-top: 4px;
     border-radius: 10px;
-
 }
 
 section div {
@@ -112,10 +111,11 @@ section p {
 section ul {
     display: flex;
     gap: 16px;
-    /* gap -> só funciona porque esta sendo usado display flex */
+    /* gap -> só funciona porque está sendo usado display flex */
+
     margin-top: 24px;
     flex-wrap: wrap;
-    /* quando chegar no limite da caixa os elementos vão para baixo, se couber ele vai se ajustando*/
+    /* flex-wrap -> quando chegar no limite da caixa os elementos vão para baixo, se couber ele vai se ajustando */
 }
 
 section ul li {
@@ -139,13 +139,13 @@ section ul li:hover {
 
 /* Animation */
 
-@keyframes fromTop{
+@keyframes fromTop {
     from {
         opacity: 0;
         transform: translateY(-30px);
     }
 
-    to{
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -154,10 +154,10 @@ section ul li:hover {
 @keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(30px);
     }
 
-    to{
+    to {
         opacity: 1;
         transform: translateY(0);
     }
